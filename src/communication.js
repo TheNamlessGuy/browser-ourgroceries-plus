@@ -2,6 +2,8 @@ const Communication = {
   actions: {
     'get-opts': async function() { return await Opts.get(); },
     'toggle-category-safeness': async function(msg) { await Opts.category.toggleSafeness(msg.category); },
+    'mark-category-as-safe': async function(msg) { await Opts.category.markAsSafe(msg.category); },
+    'unmark-category-as-safe': async function(msg) { await Opts.category.unmarkAsSafe(msg.category); },
   },
 
   /**

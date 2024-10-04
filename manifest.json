@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "OurGroceries plus",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Makes handling the OurGroceries website a bit easier",
   "author": "TheNamlessGuy",
   "homepage_url": "https://github.com/TheNamlessGuy/browser-ourgroceries-plus",
@@ -31,9 +31,16 @@
 
   "content_scripts": [{
     "matches": ["*://www.ourgroceries.com/your-lists/list/*"],
-    "js": ["src/injectable.js"],
+    "js": ["src/injectables/list.js"],
     "run_at": "document_start"
   }],
+
+  "browser_action": {
+    "default_icon": {
+      "48": "res/icon/48.png"
+    },
+    "default_title": "OurGroceries plus"
+  },
 
   "browser_specific_settings": {
     "gecko": {
